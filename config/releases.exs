@@ -28,7 +28,6 @@ config :example, ExampleWeb.Endpoint,
     port: String.to_integer(System.get_env("PORT") || "4000"),
     transport_options: [socket_opts: [:inet6]]
   ],
-  url: [host: System.get_env("HOSTNAME") || nil, port: 443],
   cache_static_manifest: "priv/static/cache_manifest.json",
   secret_key_base: secret_key_base
   # url: [host: "example.com", port: 80],

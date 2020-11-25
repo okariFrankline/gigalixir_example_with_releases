@@ -1,5 +1,8 @@
 #!/usr/bin/env bash
 
+# exit on error
+set -o errexit
+
 mix deps.get --only prod
 MIX_ENV=prod mix compile
 
@@ -10,6 +13,5 @@ mix phx.digest
 
 # remove the build
 rm -rf "_build"
-# provide the env
-source .env
-MIX_ENV=prod mix release
+
+MIX_ENV=prod mix release --overwrite
