@@ -8,7 +8,7 @@ MIX_ENV=prod mix compile
 
 # compiles the js
 npm install --prefix ./assets
-npm deploy --prefix ./assets
+npm run deploy --prefix ./assets
 mix phx.digest
 
 # remove the build
